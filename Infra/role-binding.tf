@@ -1,4 +1,9 @@
 resource "kubernetes_cluster_role_binding" "traefik-role-binding" {
+
+  depends_on = [ 
+    kubernetes_cluster_role.traefik-role
+   ]
+
   metadata {
     name = "traefik-role-binding"
   }

@@ -1,4 +1,9 @@
 resource "kubernetes_cluster_role" "traefik-role" {
+
+  depends_on = [ 
+    kubernetes_manifest.traefik-account
+   ]
+
   metadata {
     name = "traefik-role"
   }

@@ -1,4 +1,5 @@
 resource "kubernetes_service" "dashboard" {
+
   metadata {
     name = "traefik-dashboard-service"
   }

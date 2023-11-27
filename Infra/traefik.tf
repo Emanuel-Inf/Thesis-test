@@ -1,4 +1,8 @@
 resource "kubernetes_deployment" "traefik-deployment" {
+  
+  depends_on = [ 
+    kubernetes_service.web 
+  ]
   metadata {
     name = "traefik-deployment"
     labels = {
